@@ -1,0 +1,183 @@
+:root {
+  --fundoAzulEscuro: #090d33;  
+}
+
+body {
+  display: flex;  
+  flex-direction: column;
+  background-color: var(--fundoAzulEscuro);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  min-height: 90vh;
+  color: white;
+  background-color: var(--fundoAzulEscuro);
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400; 
+}
+
+button {
+  font-size: large;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #52a3c0;
+  border: 2px solid rgba(5, 17, 46, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, 
+              transform 0.2s ease, 
+              box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #35738b; 
+  border-color: #5aa8c4; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+
+button:active {
+  background-color: #3b87a3;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.sideMenu {
+  display: flex;
+  background-color: #3b87a3;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  width: 100px;
+  border-radius: 4px;
+  box-shadow: inset 0 4px 6px rgba(5, 17, 46, 0.1), 0 0 12px 2px #52a3c0, 0 5px 10px rgba(8, 48, 88, 0.2);
+  margin-right: 20px;
+  height: fit-content;  
+}
+
+.viewPort {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;  
+  justify-content: space-between;
+  padding-bottom: 50px;  
+  width: 100%;
+  border: 1px solid rgb(231, 238, 233);
+  overflow: hidden;
+  background-image: url('./img/ceu.jpg');
+  background-repeat:round;
+  background-size: cover;
+  box-shadow: inset 0 4px 6px rgba(5, 17, 46, 0.1), 0 0 12px 2px #52a3c0, 0 5px 10px rgba(8, 48, 88, 0.2);
+}
+
+.info {  
+  opacity: 0.8;
+  font-size: small;
+  font-family: Helvetica, Verdana, sans-serif;
+  color:#aae2e5;
+  min-height: 20px;
+  margin-left: 100px;  
+}
+
+.jetTrack {
+  position: relative;
+  margin-top: 2px;
+  opacity: 1;
+  left:-100px;
+  width: 110%;  
+  height: 70px;      
+}
+
+.skyArea {
+  flex-grow: 1;  
+}
+
+.cannonArea {
+  z-index: 1;
+  height: 80px;
+  width: 100%;
+  margin: 0px 10px 0px 2px;
+  background-color: #b4f9fe;     
+}
+
+img:focus {
+  outline: none;  
+}
+
+@keyframes jetframes {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(10);
+  }
+}
+
+@keyframes bomb1 {
+  0% {
+    transform: translate(95vw, 0vh);
+  }
+  50% {
+    transform: translate(70vw, 10vh);
+  }
+  100% {
+    transform: translate(60vw, 60vh);
+  }
+}
+
+@keyframes bomb2 {
+  0% {
+    transform: translate(75vw, 0vh);
+  }
+  50% {
+    transform: translate(60vw, 10vh);
+  }
+  100% {
+    transform: translate(55vw, 60vh);
+  }
+}
+
+
+.jetAnimation {
+  animation-name: jetframes;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.bomb1 {
+  animation-name: bomb1;
+  animation-duration: 2s;
+  animation-iteration-count: 4;
+  animation-timing-function: ease-in;
+}
+
+.bomb2 {
+  animation-name: bomb2;
+  animation-duration: 3s;
+  animation-iteration-count: 4;
+  animation-timing-function: cubic-bezier();
+}
+
+
+
+.warning {
+  position: relative;
+  background-color: #ee0b0b;
+  border: 2px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  width: 120px;
+  left: 260px;
+  top: 150px;
+}
