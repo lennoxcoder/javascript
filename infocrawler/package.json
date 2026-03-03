@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "fast-xml-parser": "^5.4.1"
-  },
-  "type": "module"
-}
